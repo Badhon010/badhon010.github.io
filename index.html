@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Badhon Khan - Web Developer and Python Programmer. Portfolio showcasing projects, skills and services.">
+    <title>Badhon's Portfolio</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Badhon Khan</h1>
+        <nav>
+            <ul>
+                <li><button onclick="navToSec('home')">Home</button></li>
+                <li><button onclick="navToSec('about')">About</button></li>
+                <li><button onclick="navToSec('skills')">Skills</button></li>
+                <li><button onclick="navToSec('projects')">Projects</button></li>
+                <li><button onclick="navToSec('services')">Services</button></li>
+                <li><button onclick="navToSec('contact')">Contact</button></li>
+            </ul>
+        </nav>
+        <div>
+            <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <button id="toggle-btn"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </header>
+    <main>
+
+        <!-- HOME / HERO -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Badhon Khan</span></h1>
+                <h2>Full-Stack Web Developer | Python & Django</h2>
+                <p>
+                    I build web applications and creative projects. <br>
+                    I love solving problems with code and creating useful software.
+                </p>
+
+                <div class="hero-buttons">
+                    <button onclick="navToSec('projects')">View Projects</button>
+                    <button onclick="navToSec('contact')">Contact Me</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="container">
+                <h1>About Me</h1>
+                <p>
+                    I'm a passionate developer who enjoys building web applications,
+                    automation tools, and learning new technologies. I mainly work with
+                    JavaScript, Python, and Django to build useful and scalable projects.
+                </p>
+
+                <p>
+                    My goal is to become a professional software engineer and create
+                    tools that help people learn and grow.
+                </p>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <div class="container">
+                <h1>Skills</h1>
+                <div id="skills-grid"></div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <div class="container">
+                <h1>Projects</h1>
+
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <h3>Omlytrix Game</h3>
+                        <p>A fun game built using Python and Pygame.</p>
+                        <a href="https://github.com/Badhon010/omlytrix" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View Project</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Sudoku Web</h3>
+                        <p>A Sudoku game built with raw HTML, CSS, and JavaScript.</p>
+                        <a href="https://badhon010.github.io/sudokuweb/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View Project</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Demon Survival</h3>
+                        <p>A thrilling survival game built with Python and Pygame.</p>
+                        <a href="https://github.com/Badhon010/Demon-Survival" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View Project</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services">
+            <div class="container">
+                <h1>Services</h1>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Web Development</h3>
+                        <p>I create modern responsive websites.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Python Development</h3>
+                        <p>Automation scripts, APIs, and backend systems.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>UI Development</h3>
+                        <p>Clean and interactive user interfaces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="container">
+                <h1>Contact Me</h1>
+                <form class="contact-form" action="https://formspree.io/f/xwvrpdvj" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h2>Badhon Khan</h2>
+                <p>Full-Stack Web Developer | Python & Django</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Social</h3>
+                <a href="https://github.com/Badhon010/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.youtube.com/@SmartProgrammers0" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                <a href="mailto:badhonemail001@gmail.com" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61586577022857" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Badhon Khan. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="./static/main.js"></script>
+</body>
+
+</html>
