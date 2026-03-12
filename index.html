@@ -4,15 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Badhon Khan - Web Developer and Python Programmer. Portfolio showcasing projects, skills and services.">
-    <title>Badhon's Portfolio</title>
+    <title>Badhon Khan | Portfolio Website</title>
+    <meta name="description"content="Badhon Khan is a Python and Django developer. Explore projects, skills, and services including web development, backend systems, and modern web applications.">
+    <meta name="keywords"content="Badhon Khan, Python developer, Django developer, web developer portfolio, backend developer, Bangladesh developer">
+    <meta name="author" content="Badhon Khan">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph (for social sharing) -->
+    <meta property="og:title" content="Badhon Khan | Developer Portfolio">
+    <meta property="og:description"content="Portfolio of Badhon Khan, Python and Django developer building modern web applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://badhon010.github.io/">
+    <meta property="og:image" content="https://badhon010.github.io/static/img/my_self.png">
+    <!-- favicon -->
+    <link rel="icon" href="./static/img/favicon.png" type="image/x-icon">
+    <!-- CSS -->
     <link rel="stylesheet" href="./static/style.css">
-    <link rel="stylesheet" href="./static/all.min.css">
+    <link rel="stylesheet" href="./static/fa/all.min.css">
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Badhon Khan",
+        "url": "https://badhon010.github.io/",
+        "jobTitle": "Web Developer",
+        "knowsAbout": ["Python", "Django", "Web Development"]
+        }
+    </script>
 </head>
 
 <body>
     <header>
-        <h1>Badhon Khan</h1>
+        <img src="./static/img/favicon.png" loading="lazy" alt="BK" onclick="navToSec('home')">
         <nav>
             <ul>
                 <li><button onclick="navToSec('home')">Home</button></li>
@@ -33,34 +55,64 @@
         <!-- HOME / HERO -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Hi, I'm <span>Badhon Khan</span></h1>
-                <h2>Full-Stack Web Developer | Python & Django</h2>
-                <p>
-                    I build web applications and creative projects. <br>
-                    I love solving problems with code and creating useful software.
-                </p>
+                <p class="hero-intro">Hello, I'm</p>
+                <h1>Badhon Khan</h1>
+                <h2><span class="accent">Full-Stack Web Developer</span><br>Python • Django • JavaScript</h2>
+                <p class="hero-desc">I build modern web applications, automation tools, and creative programming projects. I enjoy solving real-world problems with clean and efficient code.</p>
 
                 <div class="hero-buttons">
-                    <button onclick="navToSec('projects')">View Projects</button>
-                    <button onclick="navToSec('contact')">Contact Me</button>
+                    <button onclick="navToSec('projects')" class="primary-btn"><i class="fa-solid fa-code"></i> View Projects</button>
+                    <button onclick="navToSec('contact')" class="secondary-btn"><i class="fa-solid fa-envelope"></i> Contact Me</button>
                 </div>
+
+                <div class="hero-social">
+                    <a href="https://github.com/Badhon010" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.youtube.com/@SmartProgrammers0" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="mailto:badhonemail001@gmail.com" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61586577022857" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="./static/img/my_self.png" alt="Badhon Khan">
             </div>
         </section>
 
         <!-- ABOUT -->
         <section id="about">
-            <div class="container">
-                <h1>About Me</h1>
-                <p>
-                    I'm a passionate developer who enjoys building web applications,
-                    automation tools, and learning new technologies. I mainly work with
-                    JavaScript, Python, and Django to build useful and scalable projects.
-                </p>
+            <div class="container about-container">
 
-                <p>
-                    My goal is to become a professional software engineer and create
-                    tools that help people learn and grow.
-                </p>
+                <div class="about-text">
+                    <h1>About Me</h1>
+
+                    <p>
+                        Hello! I'm <strong>Badhon Khan</strong>, a passionate web developer from Bangladesh.
+                        I enjoy building websites, web applications, and creative programming projects.
+                    </p>
+
+                    <p>
+                        I mainly work with <strong>JavaScript, Python, and Django</strong>.
+                        My focus is creating fast, clean, and useful applications that solve real problems.
+                    </p>
+
+                    <p>
+                        I started programming because I love building things and solving challenges.
+                        Every project I create helps me improve my skills and understand software development deeper.
+                    </p>
+
+                    <p>
+                        My long-term goal is to become a professional software engineer and build
+                        products that help people learn, work, and grow.
+                    </p>
+
+                    <div class="about-info">
+                        <div><strong>Name:</strong> Badhon Khan</div>
+                        <div><strong>Age:</strong> <span id="age"></span></div>
+                        <div><strong>Location:</strong> Bangladesh</div>
+                        <div><strong>Focus:</strong> Web Development</div>
+                    </div>
+
+                </div>
+                <div class="bounce"><i class="fa-bounce" id="changing-icon"></i></div>
             </div>
         </section>
 
@@ -80,21 +132,30 @@
                 <div class="projects-grid">
 
                     <div class="project-card">
-                        <h3>Omlytrix Game</h3>
-                        <p>A fun game built using Python and Pygame.</p>
-                        <a href="https://github.com/Badhon010/omlytrix" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View Project</a>
+                        <img src="./static/img/projects/Omlytrix_Game.png" alt="Omlytrix Game">
+                        <div>
+                            <h3>Omlytrix Game</h3>
+                            <p>A fun game built using Python and Pygame.</p>
+                            <a href="https://github.com/Badhon010/omlytrix" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View Project</a>
+                        </div>
                     </div>
 
                     <div class="project-card">
-                        <h3>Sudoku Web</h3>
-                        <p>A Sudoku game built with raw HTML, CSS, and JavaScript.</p>
-                        <a href="https://badhon010.github.io/sudokuweb/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View Project</a>
+                        <img src="./static/img/projects/Sudoku_Web.png" alt="Sudoku Web">
+                        <div>
+                            <h3>Sudoku Web</h3>
+                            <p>A Sudoku game built with raw HTML, CSS, and JavaScript.</p>
+                            <a href="https://badhon010.github.io/sudokuweb/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View Project</a>
+                        </div>
                     </div>
 
                     <div class="project-card">
-                        <h3>Demon Survival</h3>
-                        <p>A thrilling survival game built with Python and Pygame.</p>
-                        <a href="https://github.com/Badhon010/Demon-Survival" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View Project</a>
+                        <img src="./static/img/projects/Demon_Survival.png" alt="Demon Survival">
+                        <div>
+                            <h3>Demon Survival</h3>
+                            <p>A thrilling survival game built with Python and Pygame.</p>
+                            <a href="https://github.com/Badhon010/Demon-Survival" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View Project</a>
+                        </div>
                     </div>
 
                 </div>
@@ -105,69 +166,118 @@
         <section id="services">
             <div class="container">
                 <h1>Services</h1>
+
                 <div class="services-grid">
+
                     <div class="service-card">
+                        <i class="fa-solid fa-globe service-icon"></i>
                         <h3>Web Development</h3>
-                        <p>I create modern responsive websites.</p>
+                        <p>
+                            Modern responsive websites built with clean UI,
+                            fast performance and SEO friendly structure.
+                        </p>
                     </div>
 
                     <div class="service-card">
-                        <h3>Python Development</h3>
-                        <p>Automation scripts, APIs, and backend systems.</p>
+                        <i class="fab fa-python service-icon"></i>
+                        <h3>Backend Development</h3>
+                        <p>
+                            Powerful backend systems using Python and Django
+                            including APIs, authentication and database systems.
+                        </p>
                     </div>
 
                     <div class="service-card">
-                        <h3>UI Development</h3>
-                        <p>Clean and interactive user interfaces.</p>
+                        <i class="fa-solid fa-layer-group service-icon"></i>
+                        <h3>Full Stack Projects</h3>
+                        <p>
+                            Complete web applications including frontend,
+                            backend, database and deployment.
+                        </p>
                     </div>
+
                 </div>
+
             </div>
         </section>
 
         <!-- CONTACT -->
         <section id="contact">
-            <div class="container">
-                <h1>Contact Me</h1>
+            <div class="container contact-container">
+
+                <div class="contact-info">
+                    <h1>Contact Me</h1>
+
+                    <p>
+                        If you have a project idea, collaboration opportunity,
+                        or just want to say hello — feel free to contact me.
+                    </p>
+
+                    <div class="contact-details">
+                        <a href="mailto:badhonemail001@gmail.com" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i> badhonemail001@gmail.com</p>
+                        <a href="https://github.com/Badhon010/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github.com/Badhon010</a>
+                        <a href="https://www.youtube.com/@SmartProgrammers0" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> SmartProgrammers</a>
+                        <a href="https://www.facebook.com/profile.php?id=61586577022857" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i>Facebook ID</a>
+                    </div>
+                </div>
+
                 <form class="contact-form" action="https://formspree.io/f/xwvrpdvj" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Your Message" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
+
             </div>
         </section>
     </main>
 
     <footer>
+        <button class="top-btn" onclick="navToSec('home')"><i class="fa-solid fa-chevron-up"></i></button>
         <div class="footer-container">
+
             <div class="footer-about">
                 <h2>Badhon Khan</h2>
-                <p>Full-Stack Web Developer | Python & Django</p>
+                <p>
+                    Full-Stack Web Developer focused on building modern
+                    web applications using Python, Django and JavaScript.
+                </p>
             </div>
 
             <div class="footer-links">
-                <h3>Quick Links</h3>
+                <h3>Navigation</h3>
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
 
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-envelope"></i> badhonemail001@gmail.com</p>
+                <p><i class="fa-brands fa-github"></i> github.com/Badhon010</p>
+                <p><i class="fa-brands fa-youtube"></i> SmartProgrammers</p>
+            </div>
+
             <div class="footer-social">
-                <h3>Social</h3>
-                <a href="https://github.com/Badhon010/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.youtube.com/@SmartProgrammers0" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
-                <a href="mailto:badhonemail001@gmail.com" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61586577022857" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                <h3>Follow Me</h3>
+                <div class="social-icons">
+                    <a href="https://github.com/Badhon010" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.youtube.com/@SmartProgrammers0" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="mailto:badhonemail001@gmail.com" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61586577022857" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                </div>
             </div>
 
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026 Badhon Khan. All Rights Reserved.</p>
+            <p>© <span id="year"></span> Badhon Khan • All Rights Reserved</p>
         </div>
+
     </footer>
     <script src="./static/main.js"></script>
 </body>
